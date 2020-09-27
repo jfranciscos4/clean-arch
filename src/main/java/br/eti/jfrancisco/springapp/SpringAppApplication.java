@@ -1,4 +1,4 @@
-package br.eti.jfrancisco.mvc.springapp;
+package br.eti.jfrancisco.springapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
