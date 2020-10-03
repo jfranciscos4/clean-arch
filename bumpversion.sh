@@ -37,7 +37,7 @@ if [ -f VERSION ]; then
     mv tmpfile CHANGES
     git add CHANGES VERSION
     git commit -m "Version bump to $INPUT_STRING"
-    git tag -a -m "Tagging version $INPUT_STRING" "v$INPUT_STRING"
+    git tag -a -m "Tagging version $INPUT_STRING" "$INPUT_STRING"
     git push origin --tags
 else
     echo "Could not find a VERSION file"
