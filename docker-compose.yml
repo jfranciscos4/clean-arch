@@ -73,13 +73,13 @@ services:
       ELASTICSEARCH_HOSTS: http://es01:9200
     networks:
       - elastic
-  db:
+  mariadb:
     image: mariadb:10.5
-    container_name: app_mariadb
+    container_name: spring_mariadb
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: app
+      MYSQL_DATABASE: spring-boot
       MYSQL_USER: root
       MYSQL_PASSWORD: root  
     volumes:
@@ -89,9 +89,9 @@ services:
     networks:
       - backend
 
-  adminer:
+  adminerdb:
     image: adminer
-    container_name: app_adminer
+    container_name: spring_adminer
     restart: always
     ports:
       - 8081:8080

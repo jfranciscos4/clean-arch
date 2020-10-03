@@ -1,4 +1,4 @@
-package br.eti.jfrancisco.infrastucture;
+package br.eti.jfrancisco.infrastructure;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
