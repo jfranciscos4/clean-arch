@@ -1,4 +1,4 @@
-package br.eti.jfrancisco.springapp;
+package br.eti.jfrancisco.infrastucture;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
