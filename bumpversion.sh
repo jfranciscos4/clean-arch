@@ -30,14 +30,14 @@ if [ -f VERSION ]; then
     echo "Will set new version to be $INPUT_STRING"
     echo $INPUT_STRING > VERSION
     echo "Version $INPUT_STRING:" > tmpfile
-    git log --pretty=format:" - %s" "v$BASE_STRING"...HEAD >> tmpfile
+    git log --pretty=format:" - %s" "$BASE_STRING"...HEAD >> tmpfile
     echo "" >> tmpfile
     echo "" >> tmpfile
     cat CHANGES >> tmpfile
     mv tmpfile CHANGES
     git add CHANGES VERSION
     git commit -m "Version bump to $INPUT_STRING"
-    git tag -a -m "Tagging version $INPUT_STRING" "v$INPUT_STRING"
+    git tag -a -m "Tagging version $INPUT_STRING" "$INPUT_STRING"
     git push origin --tags
 else
     echo "Could not find a VERSION file"
@@ -54,8 +54,8 @@ else
         echo "" >> CHANGES
         echo "" >> CHANGES
         git add VERSION CHANGES
-        git commit -m "Added VERSION and CHANGES files, Version bump to v0.1.0"
-        git tag -a -m "Tagging version 0.1.0" "v0.1.0"
+        git commit -m "Added VERSION and CHANGES files, Version bump to 0.1.0"
+        git tag -a -m "Tagging version 0.1.0" "0.1.0"
         git push origin --tags
     fi
 
