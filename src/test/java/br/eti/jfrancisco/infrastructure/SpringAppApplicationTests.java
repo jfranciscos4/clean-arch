@@ -1,4 +1,4 @@
-package br.eti.jfrancisco.mvc.springapp;
+package br.eti.jfrancisco.infrastructure;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
